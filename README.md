@@ -202,6 +202,4 @@ For Vite deployment guides, refer to the [official documentation](https://vitejs
 
 This project is licensed under [MIT License](./LICENSE).  
 
----  
-
-You can now copy and paste this directly into your repository’s `README.md` file!
+---
