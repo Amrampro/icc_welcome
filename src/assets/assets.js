@@ -48,7 +48,7 @@ export const projectData = [
     link: "/cellules",
   },
   {
-    title: "Corp Pastoral",
+    title: "Corps Pastoral",
     description: "Prenez le temps de connaitre les membres du corp pastoral",
     image: images.pastoral,
     link: "/corp-pastoral",

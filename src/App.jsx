@@ -6,6 +6,7 @@ import Star from "./pages/Star";
 import Cellules from "./pages/Cellules";
 import Page404 from "./pages/page404";
 import CellulesList from "./pages/cdm/CellulesList";
+import RdvPastoral from "./pages/RdvPastoral";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/star" element={<Star />} />
           <Route path="/cellules" element={<Cellules />} />
           <Route path="/cdm" element={<CellulesList />} />
+          <Route path="/rdv-pastoral" element={<RdvPastoral />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>
