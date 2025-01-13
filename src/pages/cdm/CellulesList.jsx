@@ -7,7 +7,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaClock } from "react-icons/fa6";
 import { FcManager } from "react-icons/fc";
 import Footer from "../../components/Footer";
-import Backbtn from "../../components/backbtn";
+import Backbtn from "../../components/Backbtn";
 
 const CellulesList = () => {
   return (
