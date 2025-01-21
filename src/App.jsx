@@ -4,7 +4,7 @@ import Annuaire from "./pages/Annuaire";
 import Welcome from "./pages/Welcome";
 import Star from "./pages/Star";
 import Cellules from "./pages/Cellules";
-import Page404 from "./pages/page404";
+import Page404 from "./pages/Page404";
 import CellulesList from "./pages/cdm/CellulesList";
 import RdvPastoral from "./pages/RdvPastoral";
 

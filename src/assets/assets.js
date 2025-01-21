@@ -85,7 +85,7 @@ export const projectData = [
   },
   {
     title: "Soins Pastoraux",
-    description: "Prenez rendez-vous avec le corp pastoral.",
+    description: "Prenez rendez-vous avec le corps pastoral.",
     image: images.rdvpastoral,
     link: "/rdv-pastoral"
   },
