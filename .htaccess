@@ -7,4 +7,6 @@
   RewriteRule . /index.html [L]
 
   AddType application/javascript .js
+  AddType application/javascript .mjs
+
 </IfModule>
