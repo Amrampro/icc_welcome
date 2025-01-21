@@ -1,5 +1,5 @@
 import React from "react";
-import Backbtn from "../components/backbtn";
+import Backbtn from "../components/Backbtn";
 import { images } from "../assets/assets";
 
 const Cellules = () => {
