@@ -66,6 +66,13 @@ export const projectData = [
     link: "/rdv-pastoral"
   },
   {
+    title: "Nos formations",
+    description:
+      "Formez-vous sur les principes et les valeurs du royaume de Dieu",
+    image: images.formations,
+    link: "/formations",
+  },
+  {
     title: "Nos différents ministères",
     description: "Retrouvez les différents ministères de notre église",
     image: images.ministries,
@@ -82,12 +89,5 @@ export const projectData = [
     description: "Prenez le temps de connaitre les membres du corp pastoral",
     image: images.pastoral,
     link: "/corp-pastoral",
-  },
-  {
-    title: "Nos formations",
-    description:
-      "Formez-vous sur les principes et les valeurs du royaume de Dieu",
-    image: images.formations,
-    link: "/formations",
   },
 ];

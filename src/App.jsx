@@ -9,6 +9,7 @@ import Cellules from "./pages/Cellules";
 import Page404 from "./pages/Page404";
 import CellulesList from "./pages/cdm/CellulesList";
 import RdvPastoral from "./pages/RdvPastoral";
+import Formations from "./pages/Formations";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/cdm" element={<CellulesList />} />
           <Route path="/rdv-pastoral" element={<RdvPastoral />} />
           <Route path="/planning" element={<Planning />} />
+          <Route path="/formations" element={<Formations />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>
