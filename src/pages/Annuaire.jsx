@@ -35,7 +35,7 @@ const Annuaire = () => {
           Inscrivez-vous sur la plateforme pour être visible de tous
         </span>
       </p>
-      <a className="bg-blue-500 px-8 py-3 rounded mt-8" href="">Commencer ici</a>
+      <a className="bg-blue-500 px-8 py-3 rounded mt-8" href="/unavailable">Commencer ici</a>
     </div>
   );
 };

@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { images } from "../../assets/assets";
 import { cellulesData } from "../../assets/others/cdm";
-import { FaMapMarkerAlt } from "react-icons/fa";
-import { FaCalendarAlt } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaMapMarkerAlt, FaCalendarAlt, FaPhoneAlt } from "react-icons/fa";
 import { FaClock } from "react-icons/fa6";
 import { FcManager } from "react-icons/fc";
 import Footer from "../../components/Footer";
 import Backbtn from "../../components/Backbtn";
 
 const CellulesList = () => {
+  const [search, setSearch] = useState("");
+
+  const filteredData = cellulesData.filter(
+    (item) =>
+      item.quater.toLowerCase().includes(search.toLowerCase()) ||
+      item.address.toLowerCase().includes(search.toLowerCase()) ||
+      item.responsable.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div>
-        <Backbtn />
+      <Backbtn />
       <div>
         <div
           style={{ background: "rgba(31, 31, 31, .6)" }}
@@ -30,19 +37,31 @@ const CellulesList = () => {
             }}
           />
           <h1 className="text-3xl sm:text-4xl md:text-[52px] inline-block max-w-3xl font-semibold">
-            <span style={{ color: "rgba(249, 208, 59, 1)" }}>Cellules </span> de
+            <span style={{ color: "rgba(249, 208, 59, 1)" }}>Cellules</span> de
             maison
           </h1>
         </div>
       </div>
+
+      {/* Search Bar */}
+      <div className="container mx-auto px-4 mb-8">
+        <input
+          type="text"
+          placeholder="Rechercher par quartier, adresse ou responsable..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="w-full p-3 rounded border-2 border-gray-300"
+        />
+      </div>
+
       <div className="container mx-auto px-4 grid gap-6 md:grid-cols-2 lg:grid-cols-3 md:items-center md:text-left">
-        {cellulesData.map((item, index) => (
+        {filteredData.map((item, index) => (
           <div
             key={index}
             className="bg-white max-w-sm rounded overflow-hidden shadow-lg h-full"
           >
             <div
-              className="bg-white max-w-sm rounded overflow-hidden shadow-lg h-360 bg-cover bg-center bg-no-repeat flex items-center text-center justify-center text-white"
+              className="bg-cover bg-center bg-no-repeat flex items-center justify-center text-white"
               style={{
                 height: "160px",
                 backgroundImage: `url(${images.cellulepicture})`,
@@ -50,7 +69,7 @@ const CellulesList = () => {
             >
               <h1 className="text-[42px] font-semibold">{item.quater}</h1>
             </div>
-            <div className="text-[20px]">
+            <div className="text-[16px]">
               <div className="p-4 grid grid-cols-2">
                 <p className="flex items-center gap-2">
                   <FaMapMarkerAlt />
@@ -73,7 +92,7 @@ const CellulesList = () => {
               </div>
               <div className="p-8 text-white">
                 <a
-                  href="#"
+                  href={`tel:${item.tel}`}
                   className="flex text-center items-center justify-center gap-2 bg-blue-500 px-8 py-3 rounded"
                 >
                   <FaPhoneAlt />
@@ -83,6 +102,12 @@ const CellulesList = () => {
             </div>
           </div>
         ))}
+
+        {filteredData.length === 0 && (
+          <p className="text-center col-span-full text-gray-500">
+            Aucune cellule trouvée pour cette recherche.
+          </p>
+        )}
       </div>
       <Footer />
     </div>
