@@ -10,6 +10,8 @@ import Page404 from "./pages/Page404";
 import CellulesList from "./pages/cdm/CellulesList";
 import RdvPastoral from "./pages/RdvPastoral";
 import Formations from "./pages/Formations";
+import CorpsPastoral from "./pages/CorpsPastoral";
+import SinglePastor from "./pages/corpspastoral/single";
 
 const App = () => {
   return (
@@ -26,6 +28,12 @@ const App = () => {
           <Route path="/rdv-pastoral" element={<RdvPastoral />} />
           <Route path="/planning" element={<Planning />} />
           <Route path="/formations" element={<Formations />} />
+          
+          {/* Routes for Corps Pastoral */}
+          <Route path="/corp-pastoral" element={<CorpsPastoral />} />
+          <Route path="/corp-pastoral/:id" element={<SinglePastor />} />
+
+          {/* 404 Page */}
           <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>

@@ -48,6 +48,12 @@ export const projectData = [
     link: "/planning",
   },
   {
+    title: "Corps Pastoral",
+    description: "Prenez le temps de connaitre les membres du corp pastoral",
+    image: images.pastoral,
+    link: "/corp-pastoral",
+  },
+  {
     title: "Départements",
     description: "Retrouvez les différents départements de notre église",
     image: images.departments,
@@ -73,21 +79,15 @@ export const projectData = [
     link: "/formations",
   },
   {
-    title: "Nos différents ministères",
-    description: "Retrouvez les différents ministères de notre église",
-    image: images.ministries,
-    link: "/ministères",
-  },
-  {
     title: "Annuaire",
     description: "Retouvez facilement les professionnels de notre église",
     image: images.annuaire,
     link: "/annuaire",
   },
   {
-    title: "Corps Pastoral",
-    description: "Prenez le temps de connaitre les membres du corp pastoral",
-    image: images.pastoral,
-    link: "/corp-pastoral",
+    title: "Nos différents ministères",
+    description: "Retrouvez les différents ministères de notre église",
+    image: images.ministries,
+    link: "/ministères",
   },
 ];
