@@ -7,5 +7,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // plugins: [react(), githubPages()],
-  base: "/icc_welcome", // Uncomment this line if you are deploying to GitHub Pages
+  // base: "/icc_welcome", // Uncomment this line if you are deploying to GitHub Pages
 })
