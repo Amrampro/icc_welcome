@@ -12,6 +12,7 @@ import RdvPastoral from "./pages/RdvPastoral";
 import Formations from "./pages/Formations";
 import CorpsPastoral from "./pages/CorpsPastoral";
 import SinglePastor from "./pages/corpspastoral/single";
+import ComingSoon from "./pages/ComingSoon";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/rdv-pastoral" element={<RdvPastoral />} />
           <Route path="/planning" element={<Planning />} />
           <Route path="/formations" element={<Formations />} />
+          <Route path="/ministeres" element={<ComingSoon />} />
           
           {/* Routes for Corps Pastoral */}
           <Route path="/corp-pastoral" element={<CorpsPastoral />} />

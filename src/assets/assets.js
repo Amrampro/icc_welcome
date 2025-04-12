@@ -88,6 +88,6 @@ export const projectData = [
     title: "Nos différents ministères",
     description: "Retrouvez les différents ministères de notre église",
     image: images.ministries,
-    link: "/ministères",
+    link: "/ministeres",
   },
 ];
