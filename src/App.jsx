@@ -37,8 +37,7 @@ const App = () => {
           <Route path="/corp-pastoral/:id" element={<SinglePastor />} />
 
           {/* 404 Page */}
-          {/* <Route path="*" element={<Page404 />} /> */}
-          <Route path="*" element={<Welcome />} />
+          <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>
     </div>
