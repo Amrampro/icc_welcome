@@ -83,11 +83,4 @@ export const planningData = [
         desciption: "Culte des Ados (ICC Charleroi)",
         time: "10h00 - 12h00",
       },
-      {
-        id: 13,
-        date: "",
-        title: "",
-        desciption: "",
-        time: "",
-      },
 ];
