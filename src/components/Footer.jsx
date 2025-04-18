@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto flex gap-8 items-center py-4 px-6 md:px-20 lg:px-32">
         <p className="text-white">
           © Impact Centre Chrétien - Charleroi {currentYear}{" "}
-          <span className="mx-2">•</span> Tous droits réservés
+          <span className="mx-2">•</span> Tous droits réservés - Propulsé par
         </p>
       </div>
     </div>

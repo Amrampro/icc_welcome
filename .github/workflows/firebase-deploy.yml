@@ -1,0 +1,64 @@
+name: Deploy to Firebase Hosting
+on:
+  push:
+    branches: ["prod"]
+
+jobs:
+  build_and_deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+
+      - name: Cache npm dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Create service account key file
+        run: |
+          echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}' > ./service-account.json
+
+      - name: Verify service account file
+        run: |
+          if [ ! -s ./service-account.json ]; then
+            echo "Service account file is empty or not created properly"
+            exit 1
+          fi
+          # Check if it's valid JSON (will error if not)
+          cat ./service-account.json | jq . || { echo "Invalid JSON in service account file"; exit 1; }
+
+      - name: Deploy to Firebase Hosting
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ./service-account.json
+          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
+        run: |
+          if [ -z "$FIREBASE_PROJECT_ID" ]; then
+            echo "Error: FIREBASE_PROJECT_ID secret is not set"
+            exit 1
+          fi
+          firebase deploy --only hosting --project $FIREBASE_PROJECT_ID --json
+
+      - name: Cleanup sensitive files
+        if: always()
+        run: |
+          [ -f ./service-account.json ] && rm ./service-account.json
