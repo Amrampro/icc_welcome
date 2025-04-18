@@ -1,33 +1,7 @@
 import React from "react";
 import Backbtn from "../components/Backbtn";
 import Footer from "../components/Footer";
-
-const timelineData = [
-  {
-    date: "Mardi",
-    title: "Temps de Prière (EDJP)",
-    description: "Temps de prière à l'écoute du Sain Esprit",
-    time: "21h00 - 22h00",
-  },
-  {
-    date: "Mercredi",
-    title: "Sortie d'évangélisation (EDJP)",
-    description: "Sortie d'évangélisation dans la ville de Charleroi",
-    time: "16h00 - 18h00",
-  },
-  {
-    date: "Mercredi",
-    title: "Famille d'Impact DUNAMIS (EDJP)",
-    description: "Cellule des maisons, église des Jeunes",
-    time: "18h00 - 20h30",
-  },
-  {
-    date: "Dimanche",
-    title: "Culte des Jeunes",
-    description: "Culte des jeunes de l'église ICC Charleroi",
-    time: "14h00 - 16h00",
-  },
-];
+import { planningData } from "../assets/others/planningData";
 
 function Planning() {
   return (
@@ -43,7 +17,7 @@ function Planning() {
             {/* Vertical Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-purple-500"></div>
 
-            {timelineData.map((item, index) => (
+            {planningData.map((item, index) => (
               <div
                 key={index}
                 className={`mb-16 flex justify-${
