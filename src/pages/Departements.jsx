@@ -1,37 +1,9 @@
 import React, { useState } from "react";
 import { images } from "../assets/assets";
-import { FaMapMarkerAlt } from "react-icons/fa";
-import { FaCalendarAlt } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
-import { FaClock } from "react-icons/fa6";
-import { FcManager } from "react-icons/fc";
 import Footer from "../components/Footer";
 import Backbtn from "../components/Backbtn";
 import { ChevronDown } from "lucide-react";
 import { departementsData } from "../assets/others/departementsData";
-
-const faqData = [
-  {
-    question: "How can I get started?",
-    answer:
-      "Getting started is easy! Simply follow our step-by-step guide in the welcome package or reach out to our support team for assistance.",
-  },
-  {
-    question: "What is the pricing structure?",
-    answer:
-      "We offer flexible pricing plans tailored to your needs. Contact our team for detailed pricing information.",
-  },
-  {
-    question: "What kind of support do you provide?",
-    answer:
-      "We provide comprehensive support including email, phone, and live chat assistance during business hours.",
-  },
-  {
-    question: "Can I cancel my subscription anytime?",
-    answer:
-      "Yes, you can cancel your subscription at any time. There are no long-term commitments required.",
-  },
-];
 
 const Departements = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -70,7 +42,7 @@ const Departements = () => {
         </div>
       </div>
       <div className="faq max-w-3xl mx-auto py-12 px-4">
-        {departementsData.map((faq, index) => (
+        {departementsData.map((dep, index) => (
           <div
             key={index}
             className="mb-4 bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-200"
@@ -79,7 +51,7 @@ const Departements = () => {
               className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50"
               onClick={() => toggleFAQ(index)}
             >
-              <span className="font-medium text-gray-900">🏅 {faq.name}</span>
+              <span className="font-medium text-gray-900">{dep.id} 🏅 {dep.name}</span>
               <ChevronDown
                 className={`w-5 h-5 text-gray-500 transition-transform duration-200 ${
                   openIndex === index ? "transform rotate-180" : ""
@@ -92,17 +64,17 @@ const Departements = () => {
               }`}
             >
               <p className="text-gray-600">
-                👑 <b>Responsable : </b> {faq.lead}
+                👑 <b>Responsable : </b> {dep.lead}
               </p>
               <p className="text-gray-600">
-                ✅ <b>Description : </b> {faq.description}
+                ✅ <b>Description : </b> {dep.description}
               </p>
               <p className="text-gray-600">
                 🔗 <b>Rejoindre : </b>
               </p>
               <img
-                src={faq.qrcode}
-                alt={faq.qrcode}
+                src={dep.qrcode}
+                alt={dep.qrcode}
                 style={{ width: "50%" }}
               />
             </div>
