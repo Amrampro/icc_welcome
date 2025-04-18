@@ -5,7 +5,7 @@ import events from "./events.jpg";
 import hall3 from "./hall3.jpg";
 import landing from "./landing.jpg";
 import ministries from "./ministries.jpg";
-import pastoral from "./pastoral.jpg";
+import pastoral from "./corpspastoral.jpg";
 import cellule from "./cellule.jpg";
 import star from "./star.jpg";
 import icc from "./icc.png";

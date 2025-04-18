@@ -39,7 +39,7 @@ const Header = () => {
             onClick={togglePopover}
             className="border border-white bg-blue-500 px-8 py-3 rounded hover:bg-white hover:text-black flex items-center gap-2"
           >
-            <FaRegPlayCircle /> <span>Présentation</span>
+            <FaRegPlayCircle /> <span>Vidéo de présentation</span>
           </a>
 
           {/* <a href="#contact" className="bg-blue-500 px-8 py-3 rounded">
