@@ -11,7 +11,7 @@ import CellulesList from "./pages/cdm/CellulesList";
 import RdvPastoral from "./pages/RdvPastoral";
 import Formations from "./pages/Formations";
 import CorpsPastoral from "./pages/CorpsPastoral";
-import SinglePastor from "./pages/corpspastoral/Single";
+import SinglePastor from "./pages/corpspastoral/single";
 import ComingSoon from "./pages/ComingSoon";
 
 const App = () => {
@@ -31,7 +31,7 @@ const App = () => {
           <Route path="/formations" element={<Formations />} />
           <Route path="/ministeres" element={<ComingSoon />} />
           <Route path="/unavailable" element={<ComingSoon />} />
-
+          
           {/* Routes for Corps Pastoral */}
           <Route path="/corp-pastoral" element={<CorpsPastoral />} />
           <Route path="/corp-pastoral/:id" element={<SinglePastor />} />
