@@ -36,7 +36,7 @@ const Header = () => {
         <div className="space-x-6 mt-16">
           <a
             href="#project"
-            // onClick={togglePopover}
+            onClick={togglePopover}
             className="border border-white bg-blue-500 px-8 py-3 rounded hover:bg-white hover:text-black flex items-center gap-2"
           >
             <FaRegPlayCircle /> <span>Vidéo de présentation</span>
@@ -68,7 +68,7 @@ const Header = () => {
           </button>
           <iframe
             className="w-full h-screen"
-            src="https://www.youtube.com/embed/GlfKkDHKMQg"
+            src="https://www.youtube.com/embed/8Yranv37Cuc?si=9hmOX59tz557CUCL"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
