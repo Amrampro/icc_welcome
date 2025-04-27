@@ -36,7 +36,7 @@ const Header = () => {
         <div className="space-x-6 mt-16">
           <a
             href="#project"
-            onClick={togglePopover}
+            // onClick={togglePopover}
             className="border border-white bg-blue-500 px-8 py-3 rounded hover:bg-white hover:text-black flex items-center gap-2"
           >
             <FaRegPlayCircle /> <span>Vidéo de présentation</span>
